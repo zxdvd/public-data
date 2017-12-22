@@ -25,7 +25,7 @@ function genPinyinMap(arr) {
     for (let p1 of pys) {
       if (!output[p1])
         output[p1] = [hanzi]
-      else
+      else if (!output[p1].includes(hanzi))
         output[p1].push(hanzi)
     }
   }
